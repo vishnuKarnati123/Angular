@@ -1,0 +1,95 @@
+<div class="mat-title">Buttons </div>
+<button mat-raised-button color="primary"><mat-icon>home</mat-icon></button>||
+<button mat-button color="warn">warn</button>||
+<button mat-sroked-button color="accent">accent</button>||
+<button mat-fab color="primary" >fab</button>||
+<button mat-mini-fab color="primary" >mini-fab</button>
+<br>
+<!-- <div class="mat-title">Toggle</div>
+<div> <mat-button-toggle value="bold" #togglebtn>Bold</mat-button-toggle>
+  {{togglebtn.checked}}
+</div> -->
+<br>
+<div>Button Toggles</div>
+<div>
+  <mat-button-toggle-group #tooglegroupbtn="matButtonToggleGroup">
+    <mat-button-toggle value="Male">Male</mat-button-toggle>
+    <mat-button-toggle value="Female">Female</mat-button-toggle>
+    <mat-button-toggle value="PreferNotToSay">PreferNotToSay</mat-button-toggle>
+  </mat-button-toggle-group> 
+  {{tooglegroupbtn.value}}
+</div>
+<br>
+<div>Icons</div>
+<div>
+  <mat-icon>credit_card</mat-icon>
+  <mat-icon>delete</mat-icon>
+</div>
+
+<div>Badges</div>
+<div>
+  <span matBadge="5" matBadgeSize="medium" matBadgePosition="above after">
+    <mat-icon>delete</mat-icon>  
+  </span>
+  <span matBadge="4" matBadgeSize="small" matBadgePosition="below after" matBadgeColor="accent" matBadgeOverlap="flase">
+    <!-- <mat-icon >delete</mat-icon>   -->
+    Notofication
+  </span>
+</div>
+<br>
+<br>
+<div class="mat-title" >Spinner</div>
+<div><mat-spinner></mat-spinner></div>
+
+<br>
+<br>
+<div class="mat-title" >Progess Bar</div>
+<section class="example-section">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  <br><br>
+  <mat-progress-bar mode="buffer"></mat-progress-bar>
+</section>
+<br>
+<div class="mat-subheading-2">ToolBar</div>
+<div>
+  <mat-toolbar style="justify-content:space-between;">
+   <button mat-raised-button color="accent"><mat-icon>menu</mat-icon></button> 
+   <div>
+     <span style="padding-right:1rem;">Home</span>
+     <span style="padding-right:1rem;">Logout</span>
+
+   </div>
+  </mat-toolbar>
+</div>
+<div class="mat-body-2">sideBar</div>
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="push" [(opened)]="opened" style="color: orange; background-color: brown;"  >Drawer content</mat-drawer>
+  <mat-drawer-content color="warn" >Main content</mat-drawer-content>
+</mat-drawer-container>
+<button (click)="opened=!opened">Load SideNav</button>
+<br>
+<br>
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item>PersonalDetails</button>
+  <button mat-menu-item>Marks</button>
+</mat-menu>
+<button [matMenuTriggerFor]="appMenu">Details</button>
+
+<!-- <div class="mat-display-4">Display 4</div>
+<div class="mat-display-3">Display 3</div>
+<div class="mat-display-2">Display 2</div>
+<div class="mat-display-1">Display 1</div>
+
+<div class="mat-headline">Headline</div>
+<div class="mat-title">Title</div>
+<div class="mat-subheading-2">Sub Heading 2</div>
+<div class="mat-subheading-1">Sub Heading 1</div>
+
+<div class="mat-body-1">This is body 1 text</div>
+<div class="mat-body-2"> body 2 text </div>
+<div class="mat-caption">This is caption text</div>
+             
+                                       
+                                       
+
+<button mat-raised-button>Submit</button> -->
